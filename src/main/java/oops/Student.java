@@ -18,5 +18,13 @@ public class Student {
         Square S1= new Square();
         S1.side=5;
         S1.getarea();
+        Rectangle S3= new Rectangle();
+        S3.height=9;
+        S3.width=9;
+        S3.topLeft=new Point(2,3);
+        S3.getArea();
+        System.out.println(S3.getBottomright().getX());
+        System.out.println(S3.getPerimeter());
+
     }
 }
