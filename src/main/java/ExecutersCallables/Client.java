@@ -10,7 +10,7 @@ import java.util.concurrent.Future;
 
 public class Client {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        ArrayList<Future<String>> AllThreadPromises = new ArrayList<>();
+       /* ArrayList<Future<String>> AllThreadPromises = new ArrayList<>();
 
 
         ExecutorService es = Executors.newFixedThreadPool(100);
@@ -26,6 +26,14 @@ public class Client {
             System.out.println(result);
         }
 
-    es.shutdown();
+    es.shutdown();*/
+        ExecutorService es = Executors.newFixedThreadPool(10);
+
+        ArrayCreator AC = new ArrayCreator(10, es);
+
+        for (Integer number : AC.ArrayNumbers) {
+            System.out.println(number);
+
+        }
     }
 }
